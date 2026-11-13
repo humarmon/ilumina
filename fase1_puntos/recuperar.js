@@ -1,0 +1,18 @@
+const WORK=process.env.WORK||'.';
+const fs=require('fs');const i=process.argv[2];
+const ch=JSON.parse(fs.readFileSync(WORK+'/choice.json'));const k=ch[i];
+const [W,H]=JSON.parse(fs.readFileSync(`${WORK}/n${i}_${k}.dim`));
+globalThis.__ink={m:fs.readFileSync(`${WORK}/ink${i}_${k}.raw`),W:W,ox:0,oy:0};
+const cd=JSON.parse(fs.readFileSync(`${WORK}/cand${i}.json`));
+const vs=cd.cand.map(c=>c.v).sort((a,b)=>a-b);const bg=vs[Math.floor(vs.length/2)];
+const prev=fs.existsSync(`${WORK}/extra${i}.json`)?JSON.parse(fs.readFileSync(`${WORK}/extra${i}.json`)):[];
+globalThis.__extra=prev.concat(cd.cand.filter(c=>(c.v-bg)/(cd.M-bg)>0.45).map(c=>({x:Math.round(c.x),y:Math.round(c.y),s:1})));
+fs.writeFileSync(`${WORK}/extra${i}.json`,JSON.stringify(globalThis.__extra));
+const {autoRun}=require('../fase2_analisis/core.js');
+const g=Float32Array.from(fs.readFileSync(`${WORK}/n${i}_${k}.raw`));
+const r=autoRun(g,W,H,4);
+const txt=r.lines.map(l=>l.text).join('\n');
+const score=(txt.match(/[a-záéíóúñü]/gi)||[]).length,bad=(txt.match(/�/g)||[]).length;
+fs.mkdirSync(WORK+'/final2',{recursive:true});
+fs.writeFileSync(`${WORK}/final2/res${i}.json`,JSON.stringify({sigma:r.sigma,p:r.dec&&r.dec.p,score,lines:r.lines,dots:r.dots.map(d=>[d.x,d.y])}));
+console.log(i,'extra',globalThis.__extra.length,'score',score,'bad',bad);

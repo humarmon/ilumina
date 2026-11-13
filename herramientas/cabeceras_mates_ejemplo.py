@@ -1,3 +1,4 @@
+# Ejemplo de corrección manual de los números de cabecera (libro de mates). Rutas de ejemplo.
 import json
 from PIL import Image
 D={'0':'0','1':'1'}

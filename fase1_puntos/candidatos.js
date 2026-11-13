@@ -1,7 +1,8 @@
+const WORK=process.env.WORK||'.';
 const fs=require('fs');const i=process.argv[2];
-const [W,H]=JSON.parse(fs.readFileSync(`/tmp/l4/n${i}_1.dim`));
-const g=fs.readFileSync(`/tmp/l4/n${i}_1.raw`);
-const res=JSON.parse(fs.readFileSync(`/tmp/l4/final/res${i}.json`));const p=res.p;
+const [W,H]=JSON.parse(fs.readFileSync(`${WORK}/n${i}_1.dim`));
+const g=fs.readFileSync(`${WORK}/n${i}_1.raw`);
+const res=JSON.parse(fs.readFileSync(`${WORK}/final/res${i}.json`));const p=res.p;
 const sig=0.22*p, R=Math.ceil(3*sig);
 const k=[];let ks=0;for(let t=-R;t<=R;t++){const v=Math.exp(-t*t/(2*sig*sig));k.push(v);ks+=v;}for(let t=0;t<k.length;t++)k[t]/=ks;
 let a=new Float32Array(W*H);for(let j=0;j<W*H;j++)a[j]=255-g[j];
@@ -26,4 +27,4 @@ const cv=cand.map(c=>c.v).sort((u,v)=>u-v);
 const pct=q=>cv[Math.floor(cv.length*q)];
 console.log('p',p.toFixed(1),'present n',present.length,'median',M.toFixed(1),'p10',P10.toFixed(1),'cand n',cand.length,'cand pct 25/50/75/90/95',[0.25,0.5,0.75,0.9,0.95].map(pct).map(x=>x.toFixed(1)).join('/'));
 const h={};for(const c of cand){const b=Math.floor(c.v/M*10);h[b]=(h[b]||0)+1;}console.log('hist cand v/M x10',JSON.stringify(h));
-fs.writeFileSync(`/tmp/l4/cand${i}.json`,JSON.stringify({M,cand}));
+fs.writeFileSync(`${WORK}/cand${i}.json`,JSON.stringify({M,cand}));

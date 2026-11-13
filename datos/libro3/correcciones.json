@@ -1,0 +1,229 @@
+{
+ "_marcas": {
+  "drop": "quitar línea",
+  "foot": "pie/código sin etiquetas",
+  "unk": "ilegible",
+  "~texto": "deducido, sin etiquetas"
+ },
+ "paginas": {
+  "5": {
+   "0": "6 seis 45",
+   "1": "unk",
+   "4": "¡Descubre aventuras llenas de",
+   "5": "misterio, humor e imaginación!",
+   "6": "foot"
+  },
+  "6": {
+   "2": "unk",
+   "5": "nevadas viven los trolls y los",
+   "6": "gigantes. Es el hogar de Ki·a",
+   "7": "Escuela de Monteoscuro",
+   "8": "Es una escuela mágica en la",
+   "9": "que todo es posible. Allí",
+   "10": "aprenden Teo y sus amigos",
+   "11": "foot"
+  },
+  "7": {
+   "1": "~Reino de los Pantanos",
+   "4": "Es el hogar de Lena y Malún.",
+   "7": "humanos, tiene granjas y una",
+   "9": "~Reino de las Praderas",
+   "10": "En sus praderas abiertas de",
+   "11": "alta hierba viven las hadas y los",
+   "12": "cerdivoladores. Es el hogar de",
+   "13": "Topi y R·la",
+   "14": "foot",
+   "15": "foot"
+  },
+  "8": {
+   "1": "NOTA: Mapa que muestra la",
+   "2": "ubicación de los siguientes",
+   "3": "lugares:",
+   "9": "::Reino de las Praderas",
+   "10": "En el mapa se observan además",
+   "11": "las montañas, bosques, pantanos, un",
+   "12": "río y un lago. Consulta con tu",
+   "13": "profesor/a para más información",
+   "15": "foot"
+  },
+  "9": {
+   "0": "unk",
+   "3": ")Lena(",
+   "4": ")Topi riendo carcajadas(",
+   "6": ")Segundo trimestre(:",
+   "7": ")Lena riendo carcajadas(",
+   "8": ")Mica riendo carcajadas(",
+   "10": ")Teo riendo carcajadas("
+  },
+  "10": {
+   "0": "50",
+   "2": ")Arabela(",
+   "3": ")Topi feliz(",
+   "10": "foot"
+  },
+  "11": {
+   "0": "unk",
+   "1": "¡Bienvenidos",
+   "2": "primero de Primaria!",
+   "4": "debajo de una guirnalda con",
+   "5": "banderines de diferentes formas",
+   "6": "colores.(",
+   "7": "unk",
+   "8": "unk"
+  },
+  "12": {
+   "0": "unk",
+   "1": "unk"
+  },
+  "13": {
+   "0": "~8 ocho 53",
+   "1": "Leo el cuento )Audio( )Vídeo(",
+   "4": "tiene Teo?",
+   "5": "Teo y la bruja de los Cuatro",
+   "7": "NOTA: Cómic con siete",
+   "11": "foot"
+  },
+  "14": {
+   "0": "8 ocho 54",
+   "5": "hadas y cerdivoladores.",
+   "9": "Viñeta 3. )Teo está tumbado",
+   "11": "su lado. Teo se está imaginando",
+   "13": "sombrero y varita mágica.(",
+   "14": "Padre: ¿Quieres ir a otro",
+   "15": "foot"
+  },
+  "15": {
+   "1": "colegio?",
+   "2": "····Sí ¡a la escuela de",
+   "3": "Monteoscuro!",
+   "4": "Viñeta 4. )Teo sigue tumbado",
+   "5": "unk",
+   "6": "a su lado y le entrega una brújula.",
+   "7": "La brújula tiene fondo de color",
+   "8": "azul claro y una aguja con dos",
+   "9": "extremos acabados en punta. Un",
+   "10": "extremo rojo y otro",
+   "11": "extremo azul oscuro.",
+   "12": "El extremo de la brújula es",
+   "13": "dorado y tiene tapa.(",
+   "15": "foot"
+  },
+  "16": {
+   "0": "9 nueve 56",
+   "2": "drop",
+   "5": "Monteoscuro!",
+   "6": "Viñeta 5. )Teo gira mientras",
+   "7": "sujeta la brújula con uno de sus",
+   "8": "brazos en alto. Sus padres lo",
+   "9": "miran emocionados. La madre",
+   "10": "tiene grandes alas que ·aben",
+   "11": "unk",
+   "12": "foot"
+  },
+  "17": {
+   "0": "10 diez 57",
+   "2": "Señala.",
+   "4": "______ )Padre y madre de Teo.(",
+   "6": "2. ¿Cuántos reinos hay en",
+   "7": "Monteoscuro? Señala.",
+   "8": "foot"
+  },
+  "18": {
+   "0": "10 diez 58",
+   "3": "foot"
+  },
+  "19": {
+   "0": "10 diez 59",
+   "1": "3. ¿Cuál es el reino del",
+   "2": "·· )El reino tiene un castillo",
+   "3": "sobre una pequeña isla en mitad",
+   "6": "Alrededor del lago hay algunas",
+   "9": "ven algunas tierras cultivadas y",
+   "10": "árboles.(",
+   "11": "Reino de las montañas",
+   "12": "Reino del Valle",
+   "13": "Reino de las Praderas"
+  },
+  "20": {
+   "0": "drop",
+   "1": "drop",
+   "2": "drop",
+   "3": "foot"
+  },
+  "21": {
+   "0": "11 once 61",
+   "1": "4. Une cada habitante con su",
+   "2": "::brujo",
+   "4": "drop"
+  },
+  "23": {
+   "0": "11 once 62",
+   "1": "imaginas que le pasa?",
+   "2": "foot"
+  },
+  "24": {
+   "0": "11 once 63",
+   "1": "que Teo señala.",
+   "4": "7. ¿Te hará amigos",
+   "5": "¿A quién has conocido el",
+   "6": "primer día de clase?"
+  },
+  "25": {
+   "1": "Empezamos",
+   "2": "unk",
+   "3": "Encuentra la brújula de",
+   "5": ")Brújula sin tapa con",
+   "6": "dos agujas. Ocho pequeñas",
+   "7": "líneas rodean la esfera. Una",
+   "9": "primera de estas líneas y la",
+   "10": "otra aguja señala la séptima",
+   "11": "línea.(",
+   "12": "foot"
+  },
+  "26": {
+   "0": "12 doce 66",
+   "5": "opuesto señala una letra",
+   "7": "drop",
+   "11": ")Brújula sin tapa con",
+   "12": "dos agujas. Ocho pequeñas",
+   "13": "líneas rodean la esfera. Una",
+   "15": "primera de estas líneas y la",
+   "16": "otra aguja señala la séptima",
+   "17": "foot"
+  },
+  "27": {
+   "0": "12 doce 67",
+   "2": "drop",
+   "3": ")Brújula sin tapa con",
+   "9": "foot",
+   "10": "foot"
+  },
+  "28": {
+   "0": "12 doce 68",
+   "1": "Teo gorro guantes botas",
+   "2": "gafas de sol",
+   "3": "foot"
+  },
+  "29": {
+   "0": "13 trece 69",
+   "1": "3. Indica los cinco objetos",
+   "3": "NOTA: Imagen de un aula.",
+   "8": "profesora. En la pared lateral",
+   "9": "hay un perchero de red.",
+   "10": "Sobre las mesas de estudiantes",
+   "11": "hay folios en blanco, gomas de",
+   "12": "borrar, una barra de pegamento y",
+   "13": "un rollo de cinta adhesiva.",
+   "14": "en el suelo hay un lápiz de color.",
+   "15": "foot",
+   "16": "foot"
+  },
+  "30": {
+   "0": "13 trece 70",
+   "2": "profesora hay una mochila, un folio",
+   "3": "en blanco y un vaso portalápices",
+   "11": "foot",
+   "12": "foot"
+  }
+ }
+}
