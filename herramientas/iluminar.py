@@ -15,6 +15,7 @@ def main(pdf,salida,work=None):
         r=run(['node',os.path.join(RAIZ,'fase1_puntos','detectar_basico.js'),str(i)],env=env,capture_output=True,text=True)
         print('--- pagina',i,r.stderr.strip()); print(r.stdout)
     run([sys.executable,'-I',os.path.join(RAIZ,'fase3_contexto','reglas.py'),work])
+    run([sys.executable,'-I',os.path.join(RAIZ,'fase3_contexto','numeracion.py'),work])
     ims=[]
     for i in paginas:
         jpg=os.path.join(work,'r%d.jpg'%i); run([sys.executable,'-I',os.path.join(RAIZ,'render','render.py'),work,str(i),jpg])
