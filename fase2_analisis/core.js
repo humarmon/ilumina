@@ -33,7 +33,7 @@ function detectDots(gray,W,H,sigma){
   const r=new Float32Array(W*H);for(let i=0;i<r.length;i++)r[i]=g1[i]-g2[i];
   // umbrales relativos
   const sub=[];for(let i=0;i<r.length;i+=7)sub.push(r[i]);
-  const rmax=pct(sub,0.9995), thrR=0.07*rmax;
+  const rmax=pct(sub,0.9995), thrR=(globalThis.__rrel||0.07)*rmax;
   const dsub=[];for(let i=0;i<d.length;i+=7)dsub.push(d[i]);
   const dmax=pct(dsub,0.997), thrM=0.33*dmax;
   const rad=Math.round(sigma*1.4), w=Math.max(2,Math.round(sigma*1.5));

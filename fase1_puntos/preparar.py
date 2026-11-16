@@ -19,7 +19,7 @@ def lado_anillas(a):
         if cx<0.1*w: sc['L']+=1
         elif cx>0.9*w: sc['R']+=1
     return 'R' if sc['R']>sc['L'] else 'L'
-def es_braille(a): return (a<140).mean()<0.06
+def es_braille(a): return a.shape[1]>=1800 and (a<140).mean()<0.06   # imágenes pequeñas o muy oscuras/grises = no son páginas
 def main(pdf,work):
     os.makedirs(work,exist_ok=True); subprocess.run(['pdfimages','-j',pdf,os.path.join(work,'raw')],check=True)
     info={}
