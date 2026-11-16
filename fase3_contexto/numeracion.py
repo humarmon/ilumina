@@ -52,6 +52,19 @@ def poner_pos(l,g,num,dudoso,cp):
         usados.add(id(c)); c['ch']=d; c['unsure']=dudoso; c.pop('drop',None)
     for c in g:
         if id(c) not in usados: c['drop']=True; c['ch']=''
+def separar_cabecera(r,w,h):
+    """Si la primera línea mezcla la cabecera (derecha) con texto del cuerpo (izquierda) porque están a la misma altura,
+    la parte en dos líneas: el texto queda abajo y la cabecera arriba."""
+    if not r['lines']: return
+    l=r['lines'][0]
+    if l['y']>0.09*h: return
+    cs=[c for c in l['cells'] if not c.get('empty') and 'ox' in c]
+    izq=[c for c in l['cells'] if c.get('empty') or c.get('ox',0)<0.62*w]; der=[c for c in l['cells'] if not c.get('empty') and c.get('ox',0)>=0.62*w]
+    if not der or not any(not c.get('empty') and c.get('ox',0)<0.55*w for c in izq): return
+    texto=''.join(' ' if c.get('empty') else ('' if c.get('drop') else c.get('ch','')) for c in izq).strip()
+    cuerpo=dict(l); cuerpo['cells']=izq; cuerpo['text']=texto; cuerpo['segs']=[{'ch':ch} for ch in texto]
+    l['cells']=der; l['text']=''; l['segs']=[]; l['y']=min(l['y'],0.05*h)   # la cabecera queda arriba
+    r['lines'].insert(1,cuerpo)
 def cabecera(r,w,h):
     if not r['lines']: return None
     l=r['lines'][0]
@@ -63,6 +76,7 @@ def cabecera(r,w,h):
 def main(work):
     info={int(k):v for k,v in json.load(open(os.path.join(work,'info.json'))).items()}
     pags=sorted(info); R={i:json.load(open(os.path.join(work,'res%d.json'%i))) for i in pags}
+    for i in pags: separar_cabecera(R[i],info[i]['w'],info[i]['h'])
     H={}
     for rank,i in enumerate(pags):
         c=cabecera(R[i],info[i]['w'],info[i]['h'])
