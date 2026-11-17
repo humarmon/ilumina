@@ -1,7 +1,10 @@
 import json,glob,sys
 from PIL import Image,ImageDraw,ImageFont
 d0,i,out=sys.argv[1],sys.argv[2],sys.argv[3]
-im=Image.open('%s/n%s.png'%(d0,i)).convert('RGB'); d=ImageDraw.Draw(im)
+BLANCO=len(sys.argv)>4 and sys.argv[4]=='blanco'   # hoja en blanco: solo lo que añade ilumina (letras, casillas, renglones), sin puntos ni fondo
+im=Image.open('%s/n%s.png'%(d0,i)).convert('RGB')
+if BLANCO: im=Image.new('RGB',im.size,(255,255,255))
+d=ImageDraw.Draw(im)
 r=json.load(open('%s/res%s.json'%(d0,i))); p=r['p']
 fp=glob.glob('/usr/share/fonts/**/DejaVuSans-Bold.ttf',recursive=True)[0]
 L=r['lines']
@@ -20,7 +23,7 @@ for L1 in L:
         k=j+1
     ys=[y for c in cells for y in pts(c)]
     for c in cells:
-        for q in c.get('pts',[]):
+        for q in ([] if BLANCO else c.get('pts',[])):
             x,y=q['x'],q['y'];rr=p*0.33;d.ellipse((x-rr,y-rr,x+rr,y+rr),fill=(0,0,0))
         if c.get('blankStart') and not L1.get('unk'):
             x1=c['ox']-p*0.9; x2=c['bx2']+p*0.9; y=c['oy']-p*0.9
